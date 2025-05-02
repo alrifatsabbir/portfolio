@@ -360,7 +360,7 @@ body{
 .card-icons:nth-child(4):hover,.card-icons:nth-child(7):hover,.card-icons:nth-child(8):hover {
   color: #fff;
 }
-.skill-sect-btn{
+.para-skill{
   color: var(--color--quaternary);
   background-color: var(--color--tertiary);
   border: 2px solid transparent;
@@ -381,7 +381,7 @@ body{
   -o-transition: all .3s linear to left;
   font-family: var(--font--ubuntu);
 }
-.skill-sect-btn:hover{
+.para-skill:hover{
   background-color: transparent;
   border: 2px solid var(--color--quaternary);
   color: var(--color--quinary);
@@ -602,4 +602,47 @@ body{
 .loader-size{
   width: 10dvw;
   color: var(--color--quaternary);
+}
+.see-more-skill{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+.part-three-abt{
+  background: radial-gradient(circle, var(--color--secondary), var(--color--primary-trans));
+}
+.divider-color{
+  background-color: var(--color--quaternary);
+}
+.para-abt{
+  color: var(--color--quaternary);
+  font-family: var(--font--exo2-sans);
+}
+.heading-abt{
+  color: var(--color--quinary);
+  font-family: var(--font--ubuntu);
+  font-size: 1.2rem;
+}
+.abt-second-pt{
+  background: linear-gradient(to left bottom, var(--color--secondary) , var(--color--primary), var(--color--secondary));
+}
+.services{
+  text-align: center;
+  padding-top: 20px;
+  font-size: 2rem;
+  font-family: var(--font--exo2-sans);
+  color: var(--color--quinary);
+  font-weight: 600;
+}
+.step-pt{
+  color: var(--color--quaternary);
+  font-family: var(--font--ubuntu);
+  font-size: 1.2rem;
+}
+.steps-p{
+  color: var(--color--quaternary);
+  font-family: var(--font--ubuntu);
 }

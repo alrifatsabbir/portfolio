@@ -19,9 +19,12 @@ const SkillsSection = () => {
             </figure>
           </div>
         ))}
-          <br />
-          <Link to="/skills" className="btn rounded-2xl text-xl mt-5 p-6 mb-10 skill-sect-btn">See More</Link>
       </div>
+      <Link to="/skills" className="btn rounded-2xl text-xl mt-10 skill-sect-btn see-more-skill">
+        <p className="mb-10 p-2 para-skill">
+          See More
+        </p>
+      </Link>
     </div>
   );
 };
