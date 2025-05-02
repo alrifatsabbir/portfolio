@@ -40,7 +40,7 @@
   -o-border-radius: 18px;
   padding: calc(0.5rem + 5px) calc(1rem + 5px);
   width: 96dvw;
-  background: radial-gradient(circle, #69756533, var(--color--primary-trans));
+  background: radial-gradient(circle, #69756533, var(--color--primary), var(--color--primary-trans));
   border-radius: 16px;
   box-shadow: 0 4px 30px #0000001a;
   backdrop-filter: blur(5px);
