@@ -12,7 +12,7 @@ function CreateProject() {
     formData.append('image', image);
 
     try {
-      const response = await axios.post('http://localhost:5040/projects/create', formData, {
+      const response = await axios.post('https://rifat-the-dev.onrender.com/projects/create', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
