@@ -597,7 +597,7 @@ body{
   color: var(--color--quinary)
 }
 .load-screen{
-  background-color: var(--color--primary-trans);
+  background-color: var(--color--primary);
 }
 .loader-size{
   width: 10dvw;
