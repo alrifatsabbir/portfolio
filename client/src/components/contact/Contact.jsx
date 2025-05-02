@@ -20,7 +20,7 @@ function Contact() {
     try {
       const response = await sendContactEmail(formData);
       setMessage(response.message);
-      setFormData({ name: '', email: '', subject: '', message: '' }); // Reset form
+      setFormData({ name: '', email: '', subject: '', message: '' });
     } catch {
       setMessage('An error occurred. Please try again.');
     }
