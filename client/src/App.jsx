@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
-import Home from './components/Home/Home';
+import Home from './components/home/Home';
 import About from './components/about/About';
 import ProjectsList from './components/projects/ProjectsList';
 import ProjectDetails from './components/projects/ProjectDetails';
