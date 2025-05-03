@@ -17,14 +17,18 @@ function BlogPost() {
   }
 
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8">{blogPost.title}</h2>
-        <p className="text-gray-600 mb-4">{blogPost.content}</p>
+    <section className="py-16 blog-post-bg">
+      <div className="container mt-16 mx-auto px-4">
+        <h2 className="text-3xl ml-35 font-bold mb-8">{blogPost.title}</h2>
+        <img src={blogPost.image} alt={blogPost.image} className='a-ratio-bp'/>
+        <p className="mb-4 mt-5 mx-auto bp-content">{blogPost.content}</p>
         <Link to="/blog" className="text-blue-500 hover:underline">
           Back to Blog
         </Link>
       </div>
+      {/* <aside className="side-blog-sec ">
+        
+      </aside> */}
     </section>
   );
 }

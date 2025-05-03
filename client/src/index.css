@@ -646,3 +646,38 @@ body{
   color: var(--color--quaternary);
   font-family: var(--font--ubuntu);
 }
+.blog-list-bg{
+  background: radial-gradient(circle, var(--color--secondary) 30%, var(--color--primary)70%);
+  font-family: var(--font--exo2-sans);
+}
+.a-ratio-bl{
+  aspect-ratio: 5/3;
+}
+.bl-div{
+  background-color: var(--color--primary-trans);
+  border: none;
+  box-shadow: 1px 1px 5px #081b02;
+  color: var(--color--quaternary);
+  cursor: pointer;
+  h3{
+    color: var(--color--quinary);
+  }
+  p{
+    color: var(--color--quaternary);
+  }
+}
+.blog-post-bg{
+  background: linear-gradient(to left, var(--color--primary ), #202720,#111,#000, #111);
+  h2{
+    color: var(--color--quinary);
+    font-family: var(--font--exo2-sans);
+  }
+}
+.a-ratio-bp{
+  width: 70dvw;
+  justify-self: center;
+}
+.bp-content{
+  color: var(--color--quaternary);
+  font-family: var(--font--ubuntu);
+}
