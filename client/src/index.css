@@ -681,3 +681,45 @@ body{
   color: var(--color--quaternary);
   font-family: var(--font--ubuntu);
 }
+.pro-list-page{
+  background: linear-gradient(to left, #111, var(--color--primary), var(--color--secondary), var(--color--primary));
+  h2{
+    color: var(--color--quinary);
+    font-family: var(--font--exo2-sans);
+  }
+}
+.p-list-image{
+  aspect-ratio: 16/9;
+  filter: grayscale(80%);
+  -webkit-filter: grayscale(80%);
+  -moz-filter: grayscale(10%);
+}
+.project-div{
+  background: linear-gradient(to left bottom, var(--color--primary)30%, var(--color--secondary));
+  border: none;
+  box-shadow: 1px 1px 5px var(--color--primary);
+}
+.p-list-image:hover{
+  filter: grayscale(0);
+  -webkit-filter: grayscale(0);
+}
+.project-detail-page{
+  background: radial-gradient(circle, var(--color--secondary) 30%, var(--color--primary)70%);
+}
+.p-details-container{
+  img{
+    width: 70dvw;
+    aspect-ratio: 16/9;
+    justify-self: center;
+  }
+  h2{
+    justify-self: center;
+    color: var(--color--quinary);
+    font-family: var(--font--exo2-sans);
+  }
+  p{
+    color: var(--color--quaternary);
+    font-family: var(--font--ubuntu);
+  }
+}
+
