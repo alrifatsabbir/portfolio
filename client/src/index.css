@@ -700,11 +700,6 @@ body{
   background: linear-gradient(to left bottom, var(--color--primary)30%, var(--color--secondary));
   border: none;
   box-shadow: 1px 1px 5px var(--color--primary);
-  color: var(--color--quaternary);
-  h3{
-    color: var(--color--quinary);
-    font-family: var(--font--exo2-sans);
-  }
 }
 .p-list-image:hover{
   filter: grayscale(0);
