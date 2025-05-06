@@ -5,8 +5,9 @@ const getSkills = async (_, res, next) => {
         { name: 'Node.js', level: 'Expert' },
         { name: 'MongoDB', level: 'Expert' },
         { name: 'Express.js', level: 'Expert' },
-        { name: 'Tailwind CSS', level: 'Intermediate' },
-        { name: 'Daisy UI', level: 'Intermediate' }
+        { name: 'GitHub', level: 'Expert'},
+        { name: 'Bootstrap', level: 'Expert'},
+        { name: 'Tailwind CSS', level: 'Expert'}
       ];
       res.json(skills);
     } catch (error) {
