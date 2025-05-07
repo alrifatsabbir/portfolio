@@ -28,7 +28,7 @@ function Skills() {
                 </figure>
               </div>
               <h3 className="text-xl text-center font-semibold mb-2">{skill.name}</h3>
-              <p className="text-gray-600 text-center">{skill.description}</p>
+              <p className=" text-center">{skill.description}</p>
             </div>
           ))}
         </div>
