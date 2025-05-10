@@ -49,8 +49,8 @@ function HireMe() {
   }, [isMessageVisible]);
 
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4">
+    <section className="py-16 hire-me-container">
+      <div className="container mt-12 mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8">Hire Me</h2>
         {isMessageVisible && (
           <div
