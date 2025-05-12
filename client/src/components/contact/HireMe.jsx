@@ -66,10 +66,11 @@ function HireMe() {
               Name
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
               id="name"
               type="text"
               name="name"
+              placeholder='Enter your name'
               value={formData.name}
               onChange={handleChange}
               required
@@ -80,10 +81,11 @@ function HireMe() {
               Email
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
               id="email"
               type="email"
               name="email"
+              placeholder='Enter your email'
               value={formData.email}
               onChange={handleChange}
               required
@@ -94,36 +96,39 @@ function HireMe() {
               Project
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
               id="project"
               type="text"
               name="project"
+              placeholder='Enter your project name'
               value={formData.project}
               onChange={handleChange}
               required
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="description">
+            <label className="block text-sm font-bold mb-2" htmlFor="description">
               Description
             </label>
             <textarea
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline"
               id="description"
               name="description"
+              placeholder='Enter your details'
               value={formData.description}
               onChange={handleChange}
               required
             />
           </div>
           <div className="mb-6">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="priceRange">
+            <label className="block text-sm font-bold mb-2" htmlFor="priceRange">
               Price Range
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline"
               id="priceRange"
               type="text"
+              placeholder='Enter your price range'
               name="priceRange"
               value={formData.priceRange}
               onChange={handleChange}

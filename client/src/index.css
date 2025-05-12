@@ -764,3 +764,14 @@ body{
     color: var(--color--quaternary);
   }
 }
+.hire-me-container{
+  background: linear-gradient(to right bottom, var(--color--secondary), #111 60%,var(--color--primary));
+    h2{
+    color: var(--color--quinary);
+    font-family: var(--font--exo2-sans);
+    justify-self: center;
+  }
+  label{
+    color: var(--color--quaternary);
+  }
+}
