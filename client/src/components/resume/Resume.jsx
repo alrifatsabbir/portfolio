@@ -1,17 +1,22 @@
 import React from 'react';
 
-function Resume() {
+const Resume = () => {
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4">
+    <section className="py-16 resume-back">
+      <div className="container mt-12 mx-auto px-4">
         <h2 className="text-3xl font-bold mb-8">My Resume</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-xl font-semibold mb-4">Education</h3>
             <div className="mb-6">
               <h4 className="text-lg font-semibold">Bachelor of Science in Computer Science</h4>
-              <p className="text-gray-600">University Name, City, Country</p>
-              <p className="text-gray-600">Graduation Year</p>
+              <p className="text-gray-400">World University of Bangladesh, Dhaka, Bangladesh</p>
+              <p className="text-gray-400">Jan, 2029</p>
+            </div>
+            <div className="mb-6">
+              <h4 className="text-lg font-semibold">Higher Secondary Certificate</h4>
+              <p className="text-gray-400">GRMSC, Dhaka, Bangladesh</p>
+              <p className="text-gray-400">Dec, 2023</p>
             </div>
             {/* Add more education entries */}
           </div>
@@ -19,9 +24,9 @@ function Resume() {
             <h3 className="text-xl font-semibold mb-4">Experience</h3>
             <div className="mb-6">
               <h4 className="text-lg font-semibold">Web Developer</h4>
-              <p className="text-gray-600">Company Name, City, Country</p>
-              <p className="text-gray-600">Start Date - End Date</p>
-              <ul className="list-disc list-inside">
+              <p className="text-gray-400">And Or, Dhaka, Bangladesh</p>
+              <p className="text-gray-400">Nov, 2024 - Continuing </p>
+              <ul className="list list-inside text-gray-300">
                 <li>Developed and maintained web applications.</li>
                 <li>Collaborated with team members to deliver projects.</li>
                 <li>Implemented new features and improved existing ones.</li>

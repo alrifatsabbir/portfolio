@@ -775,3 +775,23 @@ body{
     color: var(--color--quaternary);
   }
 }
+.resume-back{
+  background: radial-gradient(circle, var(--color--secondary), #111, var(--color--primary));
+      h2 {
+    color: var(--color--quinary);
+    font-family: var(--font--exo2-sans);
+    justify-self: center;
+  }
+  h3{
+    color: var(--color--quinary);
+    font-family: var(--font--exo2-sans);
+  }
+  h4{
+    color: var(--color--quinary);
+    font-family: var(--font--ubuntu);
+  }
+  p{
+    color: var(--color--quaternary);
+    font-family: var(--font--ubuntu);
+  }
+}
