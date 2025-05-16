@@ -36,11 +36,7 @@ const Resume = () => {
           </div>
         </div>
         <div className="mt-8">
-          <a
-            href="/path/to/your/resume.pdf" // Replace with the actual path to your resume file
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-            download="my-resume.pdf"
-          >
+          <a href="/path/to/your/resume.pdf" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" download="my-resume.pdf">
             Download Resume
           </a>
         </div>
@@ -48,6 +44,4 @@ const Resume = () => {
     </section>
   );
 }
-
-
 export default Resume;
