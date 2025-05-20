@@ -32,6 +32,7 @@ const Resume = () => {
                 <li>Implemented new features and improved existing ones.</li>
               </ul>
             </div>
+            {/* Add more experience entries */}
           </div>
         </div>
         <div className="mt-8">
