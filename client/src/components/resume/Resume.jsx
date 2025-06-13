@@ -43,7 +43,7 @@ const Resume = () => {
       </div>
     </section>
   )
-  // blank-space-rt-12
+  // blank-space-rt-13
   
 }
 export default Resume;
