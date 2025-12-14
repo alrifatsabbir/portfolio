@@ -42,3 +42,41 @@ backdrop-filter: blur(7.1px);
   height: 100;
   width: auto;
 }
+.ai-bubble {
+  background: linear-gradient(135deg, #c084fc, #a855f7);
+  box-shadow:
+    0 10px 30px rgba(168,85,247,.35),
+    inset 0 1px 0 rgba(255,255,255,.25);
+}
+
+@keyframes pulseSoft {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.ai-avatar {
+  animation: pulseSoft 2.5s ease-in-out infinite;
+}
+.dot {
+  animation: wave 1.2s infinite ease-in-out;
+}
+.dot:nth-child(2){ animation-delay:.15s }
+.dot:nth-child(3){ animation-delay:.3s }
+
+@keyframes wave {
+  0% { opacity:.3; transform: translateY(0) }
+  50% { opacity:1; transform: translateY(-4px) }
+  100% { opacity:.3 }
+}
+.phone {
+  background: linear-gradient(180deg,#000,#222);
+  box-shadow:
+    0 40px 120px rgba(0,0,0,.7),
+    inset 0 0 0 2px rgba(255,255,255,.05);
+}
+.screen {
+  background: linear-gradient(180deg, #f8fafc, #eef2ff);
+}
+.ai-bubble {
+  max-width: 85%;
+}
