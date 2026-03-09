@@ -1,0 +1,327 @@
+@import "tailwindcss";
+
+:root {
+  --background: #050816;
+  --foreground: #e2e8f0;
+  --surface: #0a0f25;
+  --surface-light: #111738;
+  --border: rgba(255, 255, 255, 0.06);
+  --accent: #06b6d4;
+  --accent-light: #22d3ee;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ─── smooth scroll ─── */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ─── portfolio section rhythm ─── */
+.portfolio-section {
+  padding: 6rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .portfolio-section {
+    padding: 8rem 2rem;
+  }
+}
+
+.portfolio-container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+/* ─── custom scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: #0e7490;
+  border-radius: 999px;
+}
+
+/* ─── selection colour ─── */
+::selection {
+  background: #0891b2;
+  color: #fff;
+}
+
+/* ═══════════════════════════════════════════
+   React Bits: SpotlightCard
+   ═══════════════════════════════════════════ */
+.card-spotlight {
+  position: relative;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  overflow: hidden;
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+  --spotlight-color: rgba(6, 182, 212, 0.08);
+}
+.card-spotlight::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    var(--spotlight-color),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.card-spotlight:hover::before,
+.card-spotlight:focus-within::before {
+  opacity: 1;
+}
+
+/* ═══════════════════════════════════════════
+   React Bits: StarBorder
+   ═══════════════════════════════════════════ */
+.star-border-container {
+  display: inline-block;
+  position: relative;
+  border-radius: 9999px;
+  overflow: hidden;
+}
+.border-gradient-bottom {
+  position: absolute;
+  width: 300%;
+  height: 50%;
+  opacity: 0.7;
+  bottom: -12px;
+  right: -250%;
+  border-radius: 50%;
+  animation: star-movement-bottom linear infinite alternate;
+  z-index: 0;
+}
+.border-gradient-top {
+  position: absolute;
+  opacity: 0.7;
+  width: 300%;
+  height: 50%;
+  top: -12px;
+  left: -250%;
+  border-radius: 50%;
+  animation: star-movement-top linear infinite alternate;
+  z-index: 0;
+}
+.inner-content {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface);
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  padding: 16px 32px;
+  border-radius: 9999px;
+  z-index: 1;
+}
+@keyframes star-movement-bottom {
+  0% { transform: translate(0%, 0%); opacity: 1; }
+  100% { transform: translate(-100%, 0%); opacity: 0; }
+}
+@keyframes star-movement-top {
+  0% { transform: translate(0%, 0%); opacity: 1; }
+  100% { transform: translate(100%, 0%); opacity: 0; }
+}
+
+/* ═══════════════════════════════════════════
+   React Bits: GradientText
+   ═══════════════════════════════════════════ */
+.animated-gradient-text {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  max-width: fit-content;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.25rem;
+  font-weight: 500;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  transition: box-shadow 0.5s ease-out;
+  overflow: hidden;
+  cursor: pointer;
+}
+.animated-gradient-text.with-border {
+  padding: 0.35rem 0.75rem;
+}
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  z-index: 0;
+  pointer-events: none;
+}
+.gradient-overlay::before {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--background);
+  z-index: -1;
+}
+.text-content {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ═══════════════════════════════════════════
+   React Bits: Dock
+   ═══════════════════════════════════════════ */
+
+/* ─ Shared ─ */
+.dock-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.15), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.dock-item:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+}
+.dock-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ─ Horizontal label (mobile / default) ─ */
+.dock-label {
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  width: fit-content;
+  white-space: pre;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: rgba(10, 15, 37, 0.95);
+  padding: 0.125rem 0.5rem;
+  font-size: 0.7rem;
+  color: #e2e8f0;
+  transform: translateX(-50%);
+}
+
+/* ─ Vertical label – show to the right ─ */
+.dock-label-vertical {
+  top: 50%;
+  left: auto;
+  right: auto;
+  transform: translateY(-50%);
+  left: calc(100% + 0.6rem);
+}
+
+/* ─ Horizontal dock (mobile) ─ */
+.dock-outer {
+  margin: 0 0.5rem;
+  display: flex;
+  max-width: 100%;
+  align-items: center;
+}
+.dock-panel {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-end;
+  width: fit-content;
+  gap: 0.65rem;
+  border-radius: 1rem;
+  background-color: rgba(10, 15, 37, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0 0.5rem 0.5rem;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+/* ─ Vertical dock (desktop) ─ */
+.dock-outer-vertical {
+  margin: 0.5rem 0;
+  display: flex;
+  max-height: 100%;
+  align-items: center;
+}
+.dock-panel-vertical {
+  position: absolute;
+  bottom: auto;
+  left: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: fit-content;
+  width: auto;
+  gap: 0.65rem;
+  border-radius: 1rem;
+  background-color: rgba(10, 15, 37, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.5rem 0.5rem;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+/* ═══════════════════════════════════════════
+   Glow pulse for hero badge
+   ═══════════════════════════════════════════ */
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 12px rgba(6, 182, 212, 0.25); }
+  50% { box-shadow: 0 0 28px rgba(6, 182, 212, 0.45); }
+}
+.glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+/* ═══════════════════════════════════════════
+   Gradient border for images
+   ═══════════════════════════════════════════ */
+.gradient-border {
+  background: linear-gradient(135deg, #06b6d4, #a855f7, #ec4899);
+  padding: 3px;
+  border-radius: 1.5rem;
+}
+.gradient-border > * {
+  border-radius: calc(1.5rem - 3px);
+}
